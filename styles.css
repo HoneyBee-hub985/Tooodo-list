@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animate-bg-pan {
+    background-size: 200% 200%;
+    animation: bg-pan 6s linear infinite;
+  }
+  @keyframes bg-pan {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  .animate-text-glow {
+    animation: text-glow 1.5s infinite alternate;
+  }
+  @keyframes text-glow {
+    0%,100% { text-shadow: 0 0 30px #f472b6, 0 0 60px #fbbf24; }
+    50% { text-shadow: 0 0 60px #f472b6, 0 0 120px #fbbf24; }
+  }
+  .animate-text-glow-neon {
+    animation: text-glow-neon 1.2s infinite alternate;
+  }
+  @keyframes text-glow-neon {
+    0%,100% {
+      text-shadow: 0 0 10px #f472b6, 0 0 20px #fde68a, 0 0 30px #f472b6, 0 0 40px #fde68a;
+      color: #f472b6;
+    }
+    50% {
+      text-shadow: 0 0 30px #f472b6, 0 0 60px #fde68a, 0 0 80px #f472b6, 0 0 100px #fde68a;
+      color: #fde68a;
+    }
+  }
+  .animate-pulse-fast {
+    animation: pulse-fast 1s infinite;
+  }
+  @keyframes pulse-fast {
+    0%,100% { opacity: 0.6; filter: blur(32px); }
+    50% { opacity: 1; filter: blur(16px); }
+  }
+  .animate-spin-slow {
+    animation: spin-slow 10s linear infinite;
+  }
+  @keyframes spin-slow {
+    0% { transform: rotate(0deg) scale(1); }
+    100% { transform: rotate(360deg) scale(1.1); }
+  }
+  .animate-btn-glow {
+    animation: btn-glow 1.2s infinite alternate;
+  }
+  @keyframes btn-glow {
+    0%,100% { box-shadow: 0 0 30px #f472b6, 0 0 40px #fde68a; }
+    50% { box-shadow: 0 0 60px #f472b6, 0 0 80px #fde68a; }
+  }
+  .animate-input-glow {
+    animation: input-glow 1.2s infinite alternate;
+  }
+  @keyframes input-glow {
+    0%,100% { box-shadow: 0 0 20px #f472b6; }
+    50% { box-shadow: 0 0 40px #f472b6; }
+  }
+  .animate-form-bounce {
+    animation: form-bounce 1.2s infinite;
+  }
+  @keyframes form-bounce {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-8px) scale(1.03); }
+  }
+  .animate-todo-glow {
+    animation: todo-glow 1.5s infinite alternate;
+  }
+  @keyframes todo-glow {
+    0%,100% { box-shadow: 0 0 16px #f472b6, 0 0 24px #fde68a; }
+    50% { box-shadow: 0 0 32px #f472b6, 0 0 48px #fde68a; }
+  }
+  .shadow-neon-pink {
+    box-shadow: 0 0 60px 10px #f472b6, 0 0 120px 30px #f472b6;
+  }
+  .shadow-neon-yellow {
+    box-shadow: 0 0 60px 10px #fde68a, 0 0 120px 30px #fde68a;
+  }
+  .animate-spin-once {
+    animation: spin-once 0.7s cubic-bezier(0.4,2,0.6,1) 1;
+  }
+  @keyframes spin-once {
+    0% { transform: rotate(0deg) scale(1); }
+    60% { transform: rotate(360deg) scale(1.08); }
+    100% { transform: rotate(360deg) scale(1); }
+  }
+}
