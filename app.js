@@ -82,8 +82,7 @@ function showDeleteConfirm(idx) {
   modal.className = 'bg-white rounded-2xl shadow-2xl p-8 flex flex-col items-center max-w-xs border-4 border-pink-400 animate-todo-glow';
 
   const img = document.createElement('img');
-  img.src = "C:\\Users\\user\\Documents\\카카오톡 받은 파일\\16ed894989b2a1564.jpg";
-  img.alt = '경고 이미지';
+  img.src = "warning.jpg"; // 경고 이미지 경로
   img.className = 'w-24 h-24 mb-4 rounded-full shadow-lg border-4 border-pink-300';
   modal.appendChild(img);
 
